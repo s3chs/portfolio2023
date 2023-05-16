@@ -1,0 +1,67 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100vh;
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 65vh;
+
+    .hero-details {
+      display: flex;
+      justify-content: space-between;
+
+      width: 100%;
+
+      span {
+        font-size: 1.1em;
+      }
+    }
+
+    .hero-title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      .first-name, .hero-lower-group .last-name {
+        font-size: 9.5em;
+      }
+
+      .hero-lower-group {
+        display: flex;
+        align-items: center;
+
+        .ellipses {
+          height: 8vh;
+        }
+
+        .last-name {
+          color: $white;
+          font-style: italic;
+          margin-left: 30px;
+        }
+      }
+    }
+
+    .hero-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .job-title {
+        font-size: 1.3em;
+      }
+
+      .geo-info {
+        padding-top: 0.5vh;
+      }
+    }
+  }
+}

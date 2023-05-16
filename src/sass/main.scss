@@ -3,8 +3,12 @@
 @import "base/reset";
 @import "base/typography";
 
+@import "components/navbar";
+@import "components/home";
+
 html {
   body {
     font-family: 'Philifont', sans-serif;
+    background-color: $silver;
   }
 }
