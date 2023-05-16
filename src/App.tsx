@@ -3,8 +3,9 @@ import './sass/main.scss';
 
 function App() {
     return (
-        <>
-        </>
+        <p>
+            welcome to my universe
+        </p>
     );
 }
 

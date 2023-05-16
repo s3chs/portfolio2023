@@ -2,3 +2,9 @@
 @import "base/global";
 @import "base/reset";
 @import "base/typography";
+
+html {
+  body {
+    font-family: 'Philifont', sans-serif;
+  }
+}
