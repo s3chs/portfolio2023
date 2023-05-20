@@ -1,3 +1,30 @@
-.layout-container {
-  padding: $global-padding;
+html {
+  body {
+    //font-family: 'Philifont', sans-serif;
+    font-family: "PP Neue Montreal";
+  }
+}
+
+.layout {
+  position: relative;
+}
+
+.section-title {
+  padding-top: 10vh;
+  font-size: $section-title;
+  color: $black;
+}
+
+.line-separator {
+  width: auto;
+  height: 1px;
+  margin-top: 10vh;
+  background-color: $dark-grey;
+}
+
+.pill {
+  display: inline-block;
+  border: 1px solid $black;
+  border-radius: 50px;
+  padding: 2.1vh 2.1vw;
 }

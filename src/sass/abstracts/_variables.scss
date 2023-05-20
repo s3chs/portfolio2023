@@ -2,11 +2,19 @@
 $black: #1E1A1D;
 $silver: #CCCCCC;
 $light-grey: #E9EAEB;
+$dark-grey: #999D9E;
 $white: #FFF;
 
 // Global padding
+$global-padding: 0 12vw 0 12vw;
+$global-text-padding-top: 8vh;
 
-$global-padding: 0 6.1vw;
+// Font sizes
+
+$small-text: 1.1em;
+$medium-text: 1.3em;
+$big-text: 2.3em;
+$section-title: 7em;
 
 // Breakpoints
 
