@@ -1,0 +1,88 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100vh;
+  padding: $global-padding;
+  background-color: $black;
+
+  .section-title {
+    color: $white;
+  }
+
+  .contact-informations-container {
+    .contact-message-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .ellipse-logo {
+        height: 11vh;
+      }
+
+      .contact-message {
+        font-size: $big-text;
+        color: $white;
+        margin-left: 3vw;
+      }
+    }
+
+    .line-separator {
+      margin-top: 4.7vh;
+    }
+
+    .contact-details-container {
+      .pill {
+        font-size: $medium-text;
+        margin-top: 4.7vh;
+        border-color: $dark-grey;
+        color: white;
+
+        &:nth-child(1) {
+          margin-right: 3vw;
+        }
+      }
+
+    }
+  }
+
+  .footer-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    height: 10vh;
+    padding-bottom: 5vh;
+
+    .portfolio-technologies {
+      color: $white;
+      font-size: $small-text;
+    }
+
+    .socials-container {
+      display: flex;
+      flex-direction: column;
+
+      .socials-title {
+        color: $dark-grey;
+        font-size: 0.8em;
+        text-transform: uppercase;
+      }
+
+      .socials-list {
+        padding-top: 3vh;
+
+        a {
+          font-size: 1em;
+          text-decoration: none;
+          color: $white;
+
+          &:nth-child(1), &:nth-child(2) {
+            margin-right: 3vw;
+          }
+        }
+      }
+    }
+  }
+}

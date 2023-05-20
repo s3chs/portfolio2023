@@ -5,10 +5,6 @@
 
 @import "components/navbar";
 @import "components/home";
-
-html {
-  body {
-    font-family: 'Philifont', sans-serif;
-    background-color: $silver;
-  }
-}
+@import "components/about";
+@import "components/projects";
+@import "components/contact";

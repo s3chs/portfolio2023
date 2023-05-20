@@ -1,0 +1,44 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  padding: $global-padding;
+  background-color: $white;
+
+  .greetings {
+    padding-top: 8vh;
+    font-size: 2.8em;
+    font-style: italic;
+  }
+
+  .biography {
+    padding-top: $global-text-padding-top;
+    font-size: $big-text;
+    text-align: justify;
+  }
+
+  .technologies-used-title {
+    display: inline-block;
+    padding-top: $global-text-padding-top;
+    color: $dark-grey;
+    font-size: 2em;
+    margin-bottom: $global-text-padding-top;
+  }
+
+  .technologies-used-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: auto;
+
+    margin-bottom: $global-text-padding-top;
+
+    .pill {
+      margin: 0 2vw 5vh 0;
+
+      font-size: 2em;
+      border-color: $black;
+    }
+  }
+}
