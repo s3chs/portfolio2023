@@ -1,7 +1,9 @@
 .projects-container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+
+  min-height: 100vh;
   padding: $global-padding;
   background-color: $light-grey;
+  overflow: hidden;
 }

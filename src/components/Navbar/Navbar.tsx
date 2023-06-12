@@ -5,7 +5,6 @@ export const Navbar = () => {
     const refs: any = useRef([]);
 
     const addToRefs = (el: HTMLAnchorElement) => {
-        console.log(el);
         if (el && !refs.current.includes(el)) {
             refs.current.push(el);
         }

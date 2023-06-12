@@ -27,7 +27,7 @@ export class LoopingElement {
 
     events() {
         window.addEventListener('scroll', () => {
-            let direction = window.pageYOffset;
+            let direction = window.scrollY;
             if (direction > this.scrollTop) {
                 this.direction = true;
                 this.lerp.target += this.speed * 2;
@@ -54,8 +54,8 @@ export class LoopingElement {
     left() {
         this.lerp.target -= this.speed;
         if (this.lerp.target < -this.metric) {
-            this.lerp.current -= -this.metric * 3;
-            this.lerp.target -= -this.metric * 3;
+            this.lerp.current -= -this.metric * 2;
+            this.lerp.target -= -this.metric * 2;
         }
     }
 

@@ -1,0 +1,8 @@
+.marquee-container {
+  white-space: nowrap;
+
+  .marquee-text {
+    position: absolute;
+    color: $dark-grey;
+  }
+}

@@ -1,6 +1,5 @@
 html {
   body {
-    //font-family: 'Philifont', sans-serif;
     font-family: "PP Neue Montreal";
   }
 }
@@ -10,16 +9,33 @@ html {
 }
 
 .section-title {
+  display: flex;
   padding-top: 10vh;
   font-size: $section-title;
   color: $black;
+  overflow: hidden;
+  padding-bottom: 10px;
+
+  span {
+    transform: translateY(120%);
+    transition: 1.5s transform cubic-bezier(0.77, 0, 0.175, 1);
+
+    &.reveal-title {
+      transform: translateY(0);
+    }
+  }
 }
 
 .line-separator {
-  width: auto;
+  width: 0;
   height: 1px;
   margin-top: 10vh;
   background-color: $dark-grey;
+  transition: 1.5s width cubic-bezier(0.84, 0, 0.01, 1);
+
+  &.reveal-line-separator {
+    width: 100%;
+  }
 }
 
 .pill {

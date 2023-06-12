@@ -7,38 +7,80 @@
   background-color: $white;
 
   .greetings {
+    display: flex;
     padding-top: 8vh;
-    font-size: 2.8em;
-    font-style: italic;
+    padding-bottom: 10px;
+    overflow: hidden;
+
+    span {
+      font-size: 2.8em;
+      font-style: italic;
+      transform: translateY(120%);
+      transition: 1.5s transform cubic-bezier(0.77, 0, 0.175, 1);
+
+      &.reveal-text {
+        transform: translateY(0);
+      }
+    }
   }
 
   .biography {
+    display: flex;
     padding-top: $global-text-padding-top;
-    font-size: $big-text;
-    text-align: justify;
+    overflow: hidden;
+    padding-bottom: 10px;
+
+    span {
+      font-size: $big-text;
+      text-align: justify;
+
+      transform: translateY(120%);
+      transition: 1.5s transform cubic-bezier(0.77, 0, 0.175, 1);
+
+      &.reveal-text {
+        transform: translateY(0);
+      }
+    }
   }
 
   .technologies-used-title {
-    display: inline-block;
+    display: flex;
     padding-top: $global-text-padding-top;
     color: $dark-grey;
     font-size: 2em;
     margin-bottom: $global-text-padding-top;
+    overflow: hidden;
+    padding-bottom: 10px;
+
+    span {
+      transform: translateY(120%);
+      transition: 1.5s transform cubic-bezier(0.77, 0, 0.175, 1);
+
+      &.reveal-text {
+        transform: translateY(0);
+      }
+    }
   }
 
   .technologies-used-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    height: auto;
-
     margin-bottom: $global-text-padding-top;
 
     .pill {
       margin: 0 2vw 5vh 0;
-
       font-size: 2em;
-      border-color: $black;
+
+      span {
+        border-color: $black;
+        opacity: 0;
+        transition: 0.7s opacity ease-in-out;
+
+        &.reveal-pill {
+          opacity: 1;
+        }
+      }
     }
   }
 }

@@ -1,10 +1,14 @@
 @import "abstracts/variables";
+@import "abstracts/locomotive-scroll";
+
 @import "base/global";
 @import "base/reset";
 @import "base/typography";
 
 @import "components/navbar";
 @import "components/home";
+@import "components/marquee";
 @import "components/about";
 @import "components/projects";
+@import "components/project";
 @import "components/contact";
