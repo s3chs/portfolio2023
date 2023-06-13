@@ -1,7 +1,32 @@
 import Ellipses from '../../assets/images/Ellipses.svg';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { LoopingElement } from '../Marquee/LoopingElement';
 import { Marquee } from '../Marquee/Marquee';
+
+const Clock = () => {
+    const [time, setTime] = useState(getFormattedTime());
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTime(getFormattedTime());
+        }, 1000);
+
+        return () => {
+            clearInterval(timer);
+        };
+    }, []);
+
+    function getFormattedTime() {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        return `${hours}:${minutes}`;
+    }
+
+    return <div>{time}</div>;
+};
+
+export default Clock;
 
 export const Home = () => {
 
@@ -27,25 +52,25 @@ export const Home = () => {
                 </div>
                 <div className="hero-title">
                     <div className="first-name">
-                        <span data-scroll data-scroll-speed="5.30" data-scroll-position="top">p</span>
-                        <span data-scroll data-scroll-speed="3.24" data-scroll-position="top">h</span>
-                        <span data-scroll data-scroll-speed="4.10" data-scroll-position="top">i</span>
-                        <span data-scroll data-scroll-speed="2.50" data-scroll-position="top">l</span>
-                        <span data-scroll data-scroll-speed="6.50" data-scroll-position="top">i</span>
-                        <span data-scroll data-scroll-speed="3.62" data-scroll-position="top">p</span>
-                        <span data-scroll data-scroll-speed="5.43" data-scroll-position="top">p</span>
-                        <span data-scroll data-scroll-speed="3.37" data-scroll-position="top">e</span>
+                        <span data-scroll data-scroll-speed="3.84" data-scroll-position="top">p</span>
+                        <span data-scroll data-scroll-speed="3.12" data-scroll-position="top">h</span>
+                        <span data-scroll data-scroll-speed="2.55" data-scroll-position="top">i</span>
+                        <span data-scroll data-scroll-speed="2.76" data-scroll-position="top">l</span>
+                        <span data-scroll data-scroll-speed="4.56" data-scroll-position="top">i</span>
+                        <span data-scroll data-scroll-speed="3.15" data-scroll-position="top">p</span>
+                        <span data-scroll data-scroll-speed="2.67" data-scroll-position="top">p</span>
+                        <span data-scroll data-scroll-speed="3.78" data-scroll-position="top">e</span>
                     </div>
                     <div className="hero-lower-group">
                         <img className="ellipses" src={Ellipses} alt="Ellipses logo" data-scroll data-scroll-speed="3.30"
                              data-scroll-delay="0.1" data-scroll-position="top"/>
                         <div className="last-name">
-                            <span data-scroll data-scroll-speed="6.69" data-scroll-position="top">b</span>
-                            <span data-scroll data-scroll-speed="4.12" data-scroll-position="top">u</span>
-                            <span data-scroll data-scroll-speed="5.89" data-scroll-position="top">t</span>
-                            <span data-scroll data-scroll-speed="4.65" data-scroll-position="top">e</span>
-                            <span data-scroll data-scroll-speed="5.26" data-scroll-position="top">a</span>
-                            <span data-scroll data-scroll-speed="4.10" data-scroll-position="top">u</span>
+                            <span data-scroll data-scroll-speed="7.69" data-scroll-position="top">b</span>
+                            <span data-scroll data-scroll-speed="5.72" data-scroll-position="top">u</span>
+                            <span data-scroll data-scroll-speed="6.89" data-scroll-position="top">t</span>
+                            <span data-scroll data-scroll-speed="6.65" data-scroll-position="top">e</span>
+                            <span data-scroll data-scroll-speed="7.26" data-scroll-position="top">a</span>
+                            <span data-scroll data-scroll-speed="6.30" data-scroll-position="top">u</span>
                         </div>
                     </div>
                     <div className="hero-info" data-scroll data-scroll-speed="2.5" data-scroll-position="top">
@@ -55,7 +80,7 @@ export const Home = () => {
                 </div>
                 <div className="hero-details" data-scroll data-scroll-speed="3" data-scroll-position="top">
                     <span>bordeaux</span>
-                    <span>19:46</span>
+                    <Clock/>
                 </div>
             </div>
             <div className="marquee">

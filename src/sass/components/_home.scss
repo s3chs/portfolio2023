@@ -15,7 +15,8 @@
     justify-content: space-between;
     align-items: center;
     padding: $global-padding;
-    height: 68vh;
+    height: 65%;
+
 
     .hero-details {
       display: flex;
@@ -36,12 +37,31 @@
 
       .first-name {
         display: flex;
-
       }
 
       .first-name, .hero-lower-group .last-name {
         font-family: "Neue Montreal", sans-serif;
-        font-size: 13vw;
+        font-size: 12em;
+
+        @media screen and (max-width: $layout-breakpoint-large) {
+          font-size: 12em;
+        }
+
+        @media screen and (max-width: $layout-breakpoint-medium) {
+          font-size: 11em;
+        }
+
+        @media screen and (max-width: $layout-breakpoint-small) {
+          font-size: 8em;
+        }
+
+        @media screen and (max-width: $layout-breakpoint-tablet) {
+          font-size: 6.5em;
+        }
+
+        @media screen and (max-width: $layout-breakpoint-xsmall) {
+          font-size: 5em;
+        }
       }
 
       .hero-lower-group {
@@ -50,6 +70,14 @@
 
         .ellipses {
           height: 10vh;
+
+          @media screen and (max-width: $layout-breakpoint-small) {
+            height: 7vh;
+          }
+
+          @media screen and (max-width: $layout-breakpoint-xsmall) {
+            display: none;
+          }
         }
 
         .last-name {
@@ -69,10 +97,19 @@
 
         .job-title {
           font-size: $medium-text;
+
+          @media screen and (max-width: $layout-breakpoint-xsmall) {
+            font-size: $small-text;
+          }
         }
 
         .geo-info {
           padding-top: 0.5vh;
+          font-size: $small-text;
+
+          @media screen and (max-width: $layout-breakpoint-xsmall) {
+            font-size: 1em;
+          }
         }
       }
     }
@@ -84,6 +121,21 @@
         font-style: italic;
         font-size: 7vw;
         bottom: 1.8vh;
+
+        @media screen and (max-width: $layout-breakpoint-small) {
+          font-size: 10vw;
+          bottom: 4vh;
+        }
+
+        @media screen and (max-width: $layout-breakpoint-tablet) {
+          font-size: 12vw;
+          bottom: 4vh;
+        }
+
+        @media screen and (max-width: $layout-breakpoint-xsmall) {
+          font-size: 15vw;
+          bottom: 5vh;
+        }
 
         span {
           color: $white;

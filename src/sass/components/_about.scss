@@ -21,6 +21,14 @@
       &.reveal-text {
         transform: translateY(0);
       }
+
+      @media screen and (max-width: $layout-breakpoint-small) {
+        font-size: 2.3em;
+      }
+
+      @media screen and (max-width: $layout-breakpoint-xsmall) {
+        font-size: 2em;
+      }
     }
   }
 
@@ -30,8 +38,12 @@
     overflow: hidden;
     padding-bottom: 10px;
 
+    @media screen and (max-width: $layout-breakpoint-small) {
+      padding-top: 3vh;
+    }
+
     span {
-      font-size: $big-text;
+      font-size: 2em;
       text-align: justify;
 
       transform: translateY(120%);
@@ -40,17 +52,25 @@
       &.reveal-text {
         transform: translateY(0);
       }
+
+      @media screen and (max-width: $layout-breakpoint-small) {
+        font-size: 1.5em;
+      }
     }
   }
 
   .technologies-used-title {
     display: flex;
-    padding-top: $global-text-padding-top;
     color: $dark-grey;
     font-size: 2em;
-    margin-bottom: $global-text-padding-top;
+    margin-bottom: 8vh;
     overflow: hidden;
     padding-bottom: 10px;
+
+    @media screen and (max-width: $layout-breakpoint-small) {
+      font-size: 1.5em;
+      margin-bottom: 2vh;
+    }
 
     span {
       transform: translateY(120%);
@@ -66,11 +86,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-bottom: $global-text-padding-top;
+    margin-bottom: 10vh;
+
+    @media screen and (max-width: $layout-breakpoint-small) {
+      margin-bottom: 5vh;
+    }
 
     .pill {
       margin: 0 2vw 5vh 0;
-      font-size: 2em;
 
       span {
         border-color: $black;

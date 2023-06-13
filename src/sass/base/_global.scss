@@ -16,6 +16,14 @@ html {
   overflow: hidden;
   padding-bottom: 10px;
 
+  @media screen and (max-width: $layout-breakpoint-small) {
+    font-size: 5em;
+  }
+
+  @media screen and (max-width: $layout-breakpoint-xsmall) {
+    font-size: 4em;
+  }
+
   span {
     transform: translateY(120%);
     transition: 1.5s transform cubic-bezier(0.77, 0, 0.175, 1);
@@ -29,12 +37,16 @@ html {
 .line-separator {
   width: 0;
   height: 1px;
-  margin-top: 10vh;
+  margin: 8vh 0;
   background-color: $dark-grey;
   transition: 1.5s width cubic-bezier(0.84, 0, 0.01, 1);
 
   &.reveal-line-separator {
     width: 100%;
+  }
+
+  @media screen and (max-width: $layout-breakpoint-xsmall) {
+    margin: 4vh 0;
   }
 }
 
@@ -43,4 +55,15 @@ html {
   border: 1px solid $black;
   border-radius: 50px;
   padding: 2.1vh 2.1vw;
+
+  font-size: 2em;
+
+  @media screen and (max-width: $layout-breakpoint-small) {
+    padding: 1.8vh 3vw;
+    font-size: 1.3em;
+  }
+
+  @media screen and (max-width: $layout-breakpoint-xsmall) {
+    font-size: 1.1em;
+  }
 }

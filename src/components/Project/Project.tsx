@@ -19,18 +19,20 @@ export const Project = ({project}: {project: ProjectProps}) => {
         }, []);
 
         return (
-            <div className="project-container">
-                <div className="project-name" style={{gridArea: project.name.position}} data-scroll data-scroll-speed="1.7">
+            <div className={`project-container`}>
+                <div className={`project-name ${project.className}`} data-scroll data-scroll-speed="1">
                     <span data-scroll data-scroll-class="reveal-text" data-scroll-offset="100">{project.name.text}</span>
                 </div>
-                <div className="project-info" style={{gridArea: project.info.position}} data-scroll data-scroll-speed="0.8">
+                <div className={`project-info ${project.className}`} data-scroll
+                     data-scroll-speed="1.3">
                     <span data-scroll data-scroll-class="reveal-text" data-scroll-offset="100">{project.info.text}</span>
                 </div>
-                <div className="project-description" style={{gridArea: project.description.position}} data-scroll data-scroll-speed="0.5">
+                <div className={`project-description ${project.className}`} data-scroll
+                     data-scroll-speed="1.2">
                     <span data-scroll data-scroll-class="reveal-text" data-scroll-offset="100">{project.description.text}</span>
                 </div>
-                <div className={`project-picture ${project.className}`} style={{gridArea: project.imgsPosition[0]}} data-scroll
-                     data-scroll-speed="1">
+                <div className={`project-picture ${project.className}-1`} data-scroll
+                     data-scroll-speed="0.5">
                     <img
                         className="picture"
                         src={project.imgs[0]}
@@ -39,8 +41,8 @@ export const Project = ({project}: {project: ProjectProps}) => {
                         data-scroll data-scroll-class="reveal-img" data-scroll-offset="100"
                     />
                 </div>
-                <div className={`project-picture ${project.className}`} style={{gridArea: project.imgsPosition[1]}}
-                     data-scroll data-scroll-speed="1">
+                <div className={`project-picture ${project.className}-2`}
+                     data-scroll data-scroll-speed="0.5">
                     <img
                         className="picture"
                         src={project.imgs[1]}
@@ -49,8 +51,8 @@ export const Project = ({project}: {project: ProjectProps}) => {
                         data-scroll data-scroll-class="reveal-img" data-scroll-offset="100"
                     />
                 </div>
-                <div className={`project-picture ${project.className}`} style={{gridArea: project.imgsPosition[2]}}
-                     data-scroll data-scroll-speed="1">
+                <div className={`project-picture ${project.className}-3`}
+                     data-scroll data-scroll-speed="0.5">
                     <img
                         className="picture"
                         src={project.imgs[2]}
@@ -59,8 +61,8 @@ export const Project = ({project}: {project: ProjectProps}) => {
                         data-scroll data-scroll-class="reveal-img" data-scroll-offset="100"
                     />
                 </div>
-                <div className="marquee" style={{gridArea: project.marquee.position}}
-                     data-scroll data-scroll-speed="2" data-scroll-class="reveal-marquee">
+                <div className={`marquee-project ${project.className}`}
+                     data-scroll data-scroll-speed="1" data-scroll-class="reveal-marquee">
                     <Marquee text={project.marquee.text} addRef={addToRefs}/>
                 </div>
             </div>

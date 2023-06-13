@@ -6,4 +6,8 @@
   padding: $global-padding;
   background-color: $light-grey;
   overflow: hidden;
+
+  @media screen and (max-width: $layout-breakpoint-small) {
+    padding-bottom: 5vh;
+  }
 }

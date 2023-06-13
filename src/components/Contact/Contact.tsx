@@ -47,7 +47,7 @@ export const Contact = () => {
                         </span>
                     </div>
                 </div>
-                <div className="line-separator" data-scroll data-scroll-speed="1" data-scroll-class="reveal-line-separator"></div>
+                <div className="line-separator" data-scroll data-scroll-class="reveal-line-separator"></div>
                 <div className="contact-details-container">
                     <span className="pill" data-scroll data-scroll-class="reveal-pill">philippe.buteau06@gmail.com</span>
                     <span className="pill" data-scroll data-scroll-class="reveal-pill">+33 6 89 68 09 31</span>
