@@ -17,7 +17,6 @@
   mix-blend-mode: difference;
 
   .initials {
-    cursor: pointer;
     font-size: 2.5em;
   }
 
@@ -33,23 +32,23 @@
         margin-right: 2vw;
       }
 
-      @media screen and (max-width: $layout-breakpoint-large) {
-        font-size: 1em
+      @media screen and (max-width: $layout-breakpoint-small) {
+        font-size: 1em;
       }
     }
 
-    .text {
+    .nav-text {
       line-height: 30px;
       height: 30px;
       overflow: hidden;
     }
 
-    .text:hover .letter,
-    .text.play .letter {
+    .nav-text:hover .letter,
+    .nav-text.play .letter {
       transform: translateY(-100%);
     }
 
-    .text .letter {
+    .nav-text .letter {
       display: inline-block;
       transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
     }

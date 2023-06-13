@@ -1,25 +1,26 @@
 import Ellipses from '../../assets/images/Ellipses-white.svg';
+import { useContext } from 'react';
+import CustomCursorContext from '../CustomCursor/context/CustomCursorContext';
 
 export const Contact = () => {
+    const {setType} = useContext(CustomCursorContext);
 
     const Footer = () => {
         return (
             <div className="footer-container">
                 <div className="portfolio-technologies">
-                    <span data-scroll data-scroll-class="reveal-text">
+                    <span data-scroll data-scroll-class="reveal-text" data-scroll-offset="-50">
                         Made with React, Typescript, SCSS and coffee
                     </span>
                 </div>
                 <div className="socials-container">
-                    <span className="socials-title"
-                          data-scroll data-scroll-class="reveal-title"
-                    >
+                    <span className="socials-title" data-scroll data-scroll-class="reveal-title" data-scroll-offset="-50">
                         socials
                     </span>
                     <div className="socials-list">
-                        <a href="#" data-scroll data-scroll-class="reveal-text">GitHub</a>
-                        <a href="#" data-scroll data-scroll-class="reveal-text">LinkedIn</a>
-                        <a href="#" data-scroll data-scroll-class="reveal-text">Instagram</a>
+                        <a href="#" data-scroll data-scroll-class="reveal-text" data-scroll-offset="-50">GitHub</a>
+                        <a href="#" data-scroll data-scroll-class="reveal-text" data-scroll-offset="-50">LinkedIn</a>
+                        <a href="#" data-scroll data-scroll-class="reveal-text" data-scroll-offset="-50">Instagram</a>
                     </div>
                 </div>
             </div>
@@ -29,7 +30,10 @@ export const Contact = () => {
     return (
         <section className="contact-container" data-scroll-section>
             <div className="section-title" data-scroll data-scroll-speed="0.8">
-                <span data-scroll data-scroll-class="reveal-title">
+                <span data-scroll data-scroll-class="reveal-title"
+                      onMouseEnter={() => setType('square')}
+                      onMouseLeave={() => setType('default')}
+                >
                     Contact
                 </span>
             </div>

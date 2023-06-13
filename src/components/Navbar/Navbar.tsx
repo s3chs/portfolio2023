@@ -1,8 +1,10 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { useRef } from 'react';
+import CustomCursorContext from '../CustomCursor/context/CustomCursorContext';
 
 export const Navbar = () => {
     const refs: any = useRef([]);
+    const {setType} = useContext(CustomCursorContext);
 
     const addToRefs = (el: HTMLAnchorElement) => {
         if (el && !refs.current.includes(el)) {
@@ -47,11 +49,35 @@ export const Navbar = () => {
 
     return (
         <div className="navbar-container">
-            <p className="initials">pb.</p>
+            <p
+                className="initials"
+                onMouseEnter={() => setType('link')}
+                onMouseLeave={() => setType('default')}
+            >
+                pb.
+            </p>
             <div className="navbar-links-container">
-                <a ref={addToRefs} className="text">about</a>
-                <a ref={addToRefs} className="text">projects</a>
-                <a ref={addToRefs} className="text">contact</a>
+                <a
+                    ref={addToRefs} className="nav-text"
+                    onMouseEnter={() => setType('link')}
+                    onMouseLeave={() => setType('default')}
+                >
+                    about
+                </a>
+                <a
+                    ref={addToRefs} className="nav-text"
+                    onMouseEnter={() => setType('link')}
+                    onMouseLeave={() => setType('default')}
+                >
+                    projects
+                </a>
+                <a
+                    ref={addToRefs} className="nav-text"
+                    onMouseEnter={() => setType('link')}
+                    onMouseLeave={() => setType('default')}
+                >
+                    contact
+                </a>
             </div>
         </div>
     );

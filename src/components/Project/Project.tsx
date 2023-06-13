@@ -1,11 +1,13 @@
-import { useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { LoopingElement } from '../Marquee/LoopingElement';
 import { ProjectProps } from '../Projects/data';
 import { Marquee } from '../Marquee/Marquee';
+import CustomCursorContext from '../CustomCursor/context/CustomCursorContext';
 
 export const Project = ({project}: {project: ProjectProps}) => {
 
         const refs: React.MutableRefObject<any> = useRef([]);
+        const {setType} = useContext(CustomCursorContext);
 
         const addToRefs = (el: HTMLDivElement) => {
             if (el && !refs.current.includes(el)) {
@@ -19,7 +21,10 @@ export const Project = ({project}: {project: ProjectProps}) => {
         }, []);
 
         return (
-            <div className={`project-container`}>
+            <div className={`project-container`}
+                 onMouseEnter={() => setType('square')}
+                 onMouseLeave={() => setType('default')}
+            >
                 <div className={`project-name ${project.className}`} data-scroll data-scroll-speed="1">
                     <span data-scroll data-scroll-class="reveal-text" data-scroll-offset="100">{project.name.text}</span>
                 </div>

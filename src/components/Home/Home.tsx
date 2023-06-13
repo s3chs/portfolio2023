@@ -44,7 +44,7 @@ export const Home = () => {
     }, []);
 
     return (
-        <section className="home-container" data-scroll-section data-scroll data-scroll-speed="8" data-scroll-position="top">
+        <section className="home-container" data-scroll-section data-scroll data-scroll-speed="6" data-scroll-position="top">
             <div className="hero-container">
                 <div className="hero-details" data-scroll data-scroll-speed="3" data-scroll-position="top">
                     <span>portfolio</span>
