@@ -32,6 +32,10 @@
       &:nth-child(1), &:nth-child(2) {
         margin-right: 2vw;
       }
+
+      @media screen and (max-width: $layout-breakpoint-large) {
+        font-size: 1em
+      }
     }
 
     .text {

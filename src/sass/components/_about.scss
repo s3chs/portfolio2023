@@ -12,6 +12,10 @@
     padding-bottom: 10px;
     overflow: hidden;
 
+    @media screen and (max-width: $layout-breakpoint-xsmall) {
+      padding-top: 4vh;
+    }
+
     span {
       font-size: 2.8em;
       font-style: italic;
@@ -56,6 +60,11 @@
       @media screen and (max-width: $layout-breakpoint-small) {
         font-size: 1.5em;
       }
+
+      @media screen and (max-width: $layout-breakpoint-xsmall) {
+        font-size: 1.2em;
+      }
+
     }
   }
 
