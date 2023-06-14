@@ -7,20 +7,38 @@ export const Contact = () => {
 
     const Footer = () => {
         return (
-            <div className="footer-container">
+            <div className="footer-container" data-scroll data-scroll-speed="2">
                 <div className="portfolio-technologies">
-                    <span data-scroll data-scroll-class="reveal-text" data-scroll-offset="-50">
+                    <span>
                         Made with React, Typescript, SCSS and coffee
                     </span>
                 </div>
                 <div className="socials-container">
-                    <span className="socials-title" data-scroll data-scroll-class="reveal-title" data-scroll-offset="-50">
+                    <span className="socials-title">
                         socials
                     </span>
                     <div className="socials-list">
-                        <a href="#" data-scroll data-scroll-class="reveal-text" data-scroll-offset="-50">GitHub</a>
-                        <a href="#" data-scroll data-scroll-class="reveal-text" data-scroll-offset="-50">LinkedIn</a>
-                        <a href="#" data-scroll data-scroll-class="reveal-text" data-scroll-offset="-50">Instagram</a>
+                        <a
+                            href="#"
+                            onMouseEnter={() => setType('link')}
+                            onMouseLeave={() => setType('default')}
+                        >
+                            GitHub
+                        </a>
+                        <a
+                            href="#"
+                            onMouseEnter={() => setType('link')}
+                            onMouseLeave={() => setType('default')}
+                        >
+                            LinkedIn
+                        </a>
+                        <a
+                            href="#"
+                            onMouseEnter={() => setType('link')}
+                            onMouseLeave={() => setType('default')}
+                        >
+                            Instagram
+                        </a>
                     </div>
                 </div>
             </div>
@@ -28,14 +46,9 @@ export const Contact = () => {
     };
 
     return (
-        <section className="contact-container" data-scroll-section>
+        <section id="contact" className="contact-container" data-scroll-section>
             <div className="section-title" data-scroll data-scroll-speed="0.8">
-                <span data-scroll data-scroll-class="reveal-title"
-                      onMouseEnter={() => setType('square')}
-                      onMouseLeave={() => setType('default')}
-                >
-                    Contact
-                </span>
+                <span data-scroll data-scroll-class="reveal-title">Contact</span>
             </div>
             <div className="contact-informations-container" data-scroll data-scroll-speed="0.5">
                 <div className="contact-message-container" data-scroll>

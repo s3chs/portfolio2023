@@ -22,7 +22,7 @@ export const Project = ({project}: {project: ProjectProps}) => {
 
         return (
             <div className={`project-container`}
-                 onMouseEnter={() => setType('square')}
+                 onMouseEnter={() => setType('project')}
                  onMouseLeave={() => setType('default')}
             >
                 <div className={`project-name ${project.className}`} data-scroll data-scroll-speed="1">

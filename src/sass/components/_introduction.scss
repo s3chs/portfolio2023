@@ -1,0 +1,41 @@
+.introduction-container {
+  background-color: #1E1A1D;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1.4s left cubic-bezier(0.77, 0, 0.105, 1);
+
+  &.out {
+    left: 100%;
+  }
+
+  .introduction-text {
+    display: flex;
+    color: $white;
+    font-size: 13vh;
+    overflow: hidden;
+
+    span {
+      transform: translateY(100%);
+      transition: 1s transform cubic-bezier(0.77, 0, 0.175, 1);
+
+      &.reveal-text {
+        transform: translate(0);
+      }
+    }
+
+    @for $i from 1 through 11 {
+      span:nth-child(#{$i}) {
+        transition-delay: #{$i * 0.1}s;
+      }
+    }
+  }
+}

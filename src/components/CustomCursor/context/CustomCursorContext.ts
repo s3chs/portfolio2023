@@ -1,10 +1,7 @@
 import { createContext } from 'react';
 
 export type CursorLookType =
-    | 'slider-hover'
-    | 'slider-drag'
-    | 'text'
-    | 'square'
+    | 'project'
     | 'link'
     | 'default';
 export type CustomCursorType = {

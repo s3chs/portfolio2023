@@ -1,6 +1,11 @@
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import { useEffect } from 'react';
+
 type technology = string;
 
 export const About = () => {
+
+    const {scroll} = useLocomotiveScroll();
 
     const technologies: technology[] = [
         'HTML',
@@ -30,7 +35,7 @@ export const About = () => {
     };
 
     return (
-        <section className="about-container" data-scroll-section>
+        <section id="about" className="about-container" data-scroll-section data-scroll-to="#about">
             <div className="section-title" data-scroll data-scroll-speed="0.8">
                 <span data-scroll data-scroll-class="reveal-title">About</span>
             </div>

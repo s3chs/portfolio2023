@@ -1,8 +1,11 @@
 import { useContext, useEffect } from 'react';
 import { useRef } from 'react';
+
 import CustomCursorContext from '../CustomCursor/context/CustomCursorContext';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 export const Navbar = () => {
+    const {scroll} = useLocomotiveScroll();
     const refs: any = useRef([]);
     const {setType} = useContext(CustomCursorContext);
 
@@ -10,6 +13,22 @@ export const Navbar = () => {
         if (el && !refs.current.includes(el)) {
             refs.current.push(el);
         }
+    };
+
+    useEffect(() => {
+        console.log(scroll);
+    }, [scroll]);
+
+    const handleSmoothScrollClick = (sectionId: string) => {
+        const sectionSelector = document.getElementById(`${sectionId}`);
+        scroll.scrollTo(sectionSelector, {
+            'offset': 0,
+            'callback': function() {
+                // do something...
+            },
+            'duration': 1000,
+            'easing': [0.75, 0.00, 0.35, 1.00],
+        });
     };
 
     useEffect(() => {
@@ -53,6 +72,7 @@ export const Navbar = () => {
                 className="initials"
                 onMouseEnter={() => setType('link')}
                 onMouseLeave={() => setType('default')}
+                onClick={() => handleSmoothScrollClick('home')}
             >
                 pb.
             </p>
@@ -61,6 +81,7 @@ export const Navbar = () => {
                     ref={addToRefs} className="nav-text"
                     onMouseEnter={() => setType('link')}
                     onMouseLeave={() => setType('default')}
+                    onClick={() => handleSmoothScrollClick('about')}
                 >
                     about
                 </a>
@@ -68,6 +89,7 @@ export const Navbar = () => {
                     ref={addToRefs} className="nav-text"
                     onMouseEnter={() => setType('link')}
                     onMouseLeave={() => setType('default')}
+                    onClick={() => handleSmoothScrollClick('projects')}
                 >
                     projects
                 </a>
@@ -75,6 +97,7 @@ export const Navbar = () => {
                     ref={addToRefs} className="nav-text"
                     onMouseEnter={() => setType('link')}
                     onMouseLeave={() => setType('default')}
+                    onClick={() => handleSmoothScrollClick('contact')}
                 >
                     contact
                 </a>

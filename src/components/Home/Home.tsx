@@ -44,7 +44,7 @@ export const Home = () => {
     }, []);
 
     return (
-        <section className="home-container" data-scroll-section data-scroll data-scroll-speed="6" data-scroll-position="top">
+        <section id="home" className="home-container" data-scroll-section data-scroll data-scroll-speed="8" data-scroll-position="top">
             <div className="hero-container">
                 <div className="hero-details" data-scroll data-scroll-speed="3" data-scroll-position="top">
                     <span>portfolio</span>
@@ -62,8 +62,8 @@ export const Home = () => {
                         <span data-scroll data-scroll-speed="3.78" data-scroll-position="top">e</span>
                     </div>
                     <div className="hero-lower-group">
-                        <img className="ellipses" src={Ellipses} alt="Ellipses logo" data-scroll data-scroll-speed="3.30"
-                             data-scroll-delay="0.1" data-scroll-position="top"/>
+                        <img className="ellipses" src={Ellipses} alt="Ellipses logo" data-scroll data-scroll-speed="4.30"
+                             data-scroll-position="top"/>
                         <div className="last-name">
                             <span data-scroll data-scroll-speed="7.69" data-scroll-position="top">b</span>
                             <span data-scroll data-scroll-speed="5.72" data-scroll-position="top">u</span>
