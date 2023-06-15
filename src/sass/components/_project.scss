@@ -191,7 +191,7 @@
 
   &.lambda-garments-2, &.koji-2, &.sneak-love-2 {
     @media screen and (max-width: $layout-breakpoint-small) {
-      grid-area: 7 / 1 / 14 / 13;
+      grid-area: 7 / 1 / 12 / 13;
     }
   }
 
@@ -235,7 +235,7 @@
   }
 
   &.koji {
-    grid-area: 4 / 2 / 6 / 8;
+    grid-area: 4 / 1 / 6 / 8;
   }
 
   &.sneak-love {
