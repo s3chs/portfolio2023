@@ -1,6 +1,5 @@
 import { useContext, useEffect } from 'react';
 import { useRef } from 'react';
-
 import CustomCursorContext from '../CustomCursor/context/CustomCursorContext';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
@@ -13,22 +12,6 @@ export const Navbar = () => {
         if (el && !refs.current.includes(el)) {
             refs.current.push(el);
         }
-    };
-
-    useEffect(() => {
-        console.log(scroll);
-    }, [scroll]);
-
-    const handleSmoothScrollClick = (sectionId: string) => {
-        const sectionSelector = document.getElementById(`${sectionId}`);
-        scroll.scrollTo(sectionSelector, {
-            'offset': 0,
-            'callback': function() {
-                // do something...
-            },
-            'duration': 1000,
-            'easing': [0.75, 0.00, 0.35, 1.00],
-        });
     };
 
     useEffect(() => {
@@ -65,6 +48,15 @@ export const Navbar = () => {
             refs.current = [];
         };
     }, []);
+
+    const handleSmoothScrollClick = (sectionId: string) => {
+        const sectionSelector = document.getElementById(`${sectionId}`);
+        scroll.scrollTo(sectionSelector, {
+            'offset': 0,
+            'duration': 1000,
+            'easing': [0.75, 0.00, 0.35, 1.00],
+        });
+    };
 
     return (
         <div className="navbar-container">

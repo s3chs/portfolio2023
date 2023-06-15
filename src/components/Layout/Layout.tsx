@@ -15,7 +15,10 @@ export const Layout = ({children}: {children: ReactNode}) => {
             smartphone: {
                 smooth: true,
             },
-        }}>
+            scrollFromAnywhere: true,
+        }}
+                                  containerRef={containerRef}
+        >
             <main data-scroll-container ref={containerRef} className="layout-container">
                 {children}
             </main>
