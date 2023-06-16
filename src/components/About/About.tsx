@@ -36,7 +36,7 @@ export const About = () => {
 
     return (
         <section id="about" className="about-container" data-scroll-section data-scroll-to="#about">
-            <div className="section-title" data-scroll data-scroll-speed="0.8">
+            <div className="section-title" data-scroll data-scroll-speed="1">
                 <span data-scroll data-scroll-class="reveal-title">About</span>
             </div>
             <div className="greetings" data-scroll data-scroll-speed="1">

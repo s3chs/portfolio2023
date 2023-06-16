@@ -15,8 +15,11 @@ export const Introduction = () => {
             refs.current.forEach((ref: any) => ref.classList.add('reveal-text'));
             setTimeout(() => {
                 containerRef.current.classList.add('out');
-            }, 3000);
-        }, 1000);
+                setTimeout(() => {
+                    containerRef.current.style.display = 'none';
+                }, 1000);
+            }, 2500);
+        }, 500);
     }, []);
 
     return (

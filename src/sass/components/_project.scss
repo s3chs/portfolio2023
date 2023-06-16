@@ -11,7 +11,7 @@
   @media screen and (max-width: $layout-breakpoint-small) {
     height: 70vh;
 
-    &:nth-last-child(1){
+    &:nth-last-child(1) {
       padding-bottom: 5vh;
     }
   }
@@ -60,191 +60,211 @@
       }
     }
   }
-}
 
-.project-info {
-  z-index: 10;
 
-  span {
-    font-size: 1em;
-    color: $black;
-    text-align: end;
-    opacity: 0;
-    transition: 0.7s opacity ease-in-out;
+  .project-info {
+    z-index: 10;
 
-    &.reveal-text {
-      opacity: 1;
-    }
+    span {
+      font-size: 1em;
+      color: $black;
+      text-align: end;
+      opacity: 0;
+      transition: 0.7s opacity ease-in-out;
 
-    @media screen and (max-width: $layout-breakpoint-small) {
-      place-self: end;
-    }
-  }
-
-  &.lambda-garments {
-    grid-area: 6 / 5 / 7 / 8;
-  }
-
-  &.koji {
-    grid-area: 2 / 2 / 3 / 5;
-  }
-
-  &.sneak-love {
-    grid-area: 7 / 3 / 8 / 5;
-  }
-
-  &.lambda-garments, &.koji, &.sneak-love {
-    @media screen and (max-width: $layout-breakpoint-small) {
-      grid-area: 1 / 9 / 2 / 13;
-    }
-  }
-}
-
-.project-description {
-  span {
-    line-height: 2.5vh;
-    text-align: justify;
-    opacity: 0;
-    transition: 0.7s opacity ease-in-out;
-
-    &.reveal-text {
-      opacity: 1;
-    }
-
-    @media screen and (max-width: $layout-breakpoint-small) {
-      display: none;
-    }
-  }
-
-  &.lambda-garments {
-    grid-area: 8 / 5 / 12 / 8;
-  }
-
-  &.koji {
-    grid-area: 7 / 5 / 12 / 8;
-  }
-
-  &.sneak-love {
-    grid-area: 8 / 5 / 12 / 9;
-  }
-}
-
-.project-picture {
-  img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-
-    clip-path: inset(0% 0% 0% 100%);
-    transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
-
-    &.reveal-img {
-      clip-path: inset(0% 0% 0% 0%);
-    }
-  }
-
-  &.contain {
-    object-fit: contain;
-  }
-
-  &.lambda-garments-1 {
-    grid-area: 1 / 1 / 6 / 5;
-  }
-
-  &.lambda-garments-2 {
-    grid-area: 6 / 2 / 12 / 5;
-  }
-
-  &.lambda-garments-3 {
-    grid-area: 1 / 8 / 11 / 13;
-  }
-
-  &.koji-1 {
-    grid-area: 3 / 1 / 12 / 5;
-  }
-
-  &.koji-2 {
-    grid-area: 1 / 5 / 6 / 8;
-  }
-
-  &.koji-3 {
-    grid-area: 1 / 8 / 12 / 13;
-  }
-
-  &.sneak-love-1 {
-    grid-area: 1 / 1 / 5 / 5;
-  }
-
-  &.sneak-love-2 {
-    grid-area: 1 / 5 / 5 / 9;
-  }
-
-  &.sneak-love-3 {
-    grid-area: 1 / 9 / 12 / 13;
-  }
-
-  &.lambda-garments-1, &.koji-1, &.sneak-love-1 {
-    @media screen and (max-width: $layout-breakpoint-small) {
-      grid-area: 2 / 1 / 7 / 13;
-    }
-  }
-
-  &.lambda-garments-2, &.koji-2, &.sneak-love-2 {
-    @media screen and (max-width: $layout-breakpoint-small) {
-      grid-area: 7 / 1 / 12 / 13;
-    }
-  }
-
-  &.lambda-garments-3, &.koji-3, &.sneak-love-3 {
-    @media screen and (max-width: $layout-breakpoint-small) {
-      display: none;
-    }
-  }
-}
-
-.marquee-project {
-  display: grid;
-  overflow: hidden;
-  color: white;
-  mix-blend-mode: difference;
-  opacity: 0;
-  transition: 1s opacity ease-in-out;
-
-  &.reveal-marquee {
-    opacity: 1;
-  }
-
-  .marquee-container {
-    position: relative;
-    white-space: nowrap;
-    z-index: 1;
-
-    .marquee-text {
-      font-size: 4vw;
-      position: absolute;
-      bottom: 1vh;
+      &.reveal-text {
+        opacity: 1;
+      }
 
       @media screen and (max-width: $layout-breakpoint-small) {
-        font-size: 8vw;
+        place-self: end;
+      }
+    }
+
+    &.lambda-garments {
+      grid-area: 6 / 5 / 7 / 8;
+    }
+
+    &.koji {
+      grid-area: 2 / 2 / 3 / 5;
+    }
+
+    &.sneak-love {
+      grid-area: 7 / 3 / 8 / 5;
+    }
+
+    &.lambda-garments, &.koji, &.sneak-love {
+      @media screen and (max-width: $layout-breakpoint-small) {
+        grid-area: 1 / 9 / 2 / 13;
       }
     }
   }
 
-  &.lambda-garments {
-    grid-area: 9 / 5 / 11 / 13;
+  .project-description {
+    span {
+      line-height: 2.5vh;
+      text-align: justify;
+      opacity: 0;
+      transition: 0.7s opacity ease-in-out;
+
+      &.reveal-text {
+        opacity: 1;
+      }
+
+      @media screen and (max-width: $layout-breakpoint-small) {
+        display: none;
+      }
+    }
+
+    &.lambda-garments {
+      grid-area: 8 / 5 / 12 / 8;
+    }
+
+    &.koji {
+      grid-area: 7 / 5 / 12 / 8;
+    }
+
+    &.sneak-love {
+      grid-area: 8 / 5 / 12 / 9;
+    }
   }
 
-  &.koji {
-    grid-area: 4 / 1 / 6 / 8;
+  .project-picture {
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+
+      clip-path: inset(0% 0% 0% 100%);
+      transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
+
+      &.reveal-img {
+        clip-path: inset(0% 0% 0% 0%);
+      }
+    }
+
+    &.contain {
+      object-fit: contain;
+    }
+
+    &.lambda-garments-1 {
+      grid-area: 1 / 1 / 6 / 5;
+    }
+
+    &.lambda-garments-2 {
+      grid-area: 6 / 2 / 12 / 5;
+    }
+
+    &.lambda-garments-3 {
+      grid-area: 1 / 8 / 11 / 13;
+    }
+
+    &.koji-1 {
+      grid-area: 3 / 1 / 12 / 5;
+    }
+
+    &.koji-2 {
+      grid-area: 1 / 5 / 6 / 8;
+    }
+
+    &.koji-3 {
+      grid-area: 1 / 8 / 12 / 13;
+    }
+
+    &.sneak-love-1 {
+      grid-area: 1 / 1 / 5 / 5;
+    }
+
+    &.sneak-love-2 {
+      grid-area: 1 / 5 / 5 / 9;
+    }
+
+    &.sneak-love-3 {
+      grid-area: 1 / 9 / 12 / 13;
+    }
+
+    &.lambda-garments-1, &.koji-1, &.sneak-love-1 {
+      @media screen and (max-width: $layout-breakpoint-small) {
+        grid-area: 2 / 1 / 7 / 13;
+      }
+    }
+
+    &.lambda-garments-2, &.koji-2, &.sneak-love-2 {
+      @media screen and (max-width: $layout-breakpoint-small) {
+        grid-area: 7 / 1 / 12 / 13;
+      }
+    }
+
+    &.lambda-garments-3, &.koji-3, &.sneak-love-3 {
+      @media screen and (max-width: $layout-breakpoint-small) {
+        display: none;
+      }
+    }
   }
 
-  &.sneak-love {
-    grid-area: 4 / 1 / 6 / 9;
+  .marquee-project {
+    display: grid;
+    overflow: hidden;
+    color: white;
+    mix-blend-mode: difference;
+    opacity: 0;
+    transition: 1s opacity ease-in-out;
+
+    &.reveal-marquee {
+      opacity: 1;
+    }
+
+    .marquee-container {
+      position: relative;
+      white-space: nowrap;
+      z-index: 1;
+
+      .marquee-text {
+        font-size: 4vw;
+        position: absolute;
+        bottom: 1vh;
+
+        @media screen and (max-width: $layout-breakpoint-small) {
+          font-size: 8vw;
+        }
+      }
+    }
+
+    &.lambda-garments {
+      grid-area: 9 / 5 / 11 / 13;
+    }
+
+    &.koji {
+      grid-area: 4 / 1 / 6 / 8;
+    }
+
+    &.sneak-love {
+      grid-area: 4 / 1 / 6 / 9;
+    }
+
+    &.lambda-garments, &.koji, &.sneak-love {
+      @media screen and (max-width: $layout-breakpoint-small) {
+        grid-area: 1 / 1 / 8 / 13;
+      }
+    }
   }
 
-  &.lambda-garments, &.koji, &.sneak-love {
-    @media screen and (max-width: $layout-breakpoint-small) {
-      grid-area: 1 / 1 / 8 / 13;
+  .project-link {
+    display: none;
+
+    @media screen and (max-width: $layout-breakpoint-xsmall) {
+      display: block;
+      grid-area: 12 / 1 / 13 / 13;
+
+      span {
+        font-size: 1em;
+        opacity: 0;
+        transition: 1s opacity ease-in-out;
+
+        &.reveal-text {
+          opacity: 1;
+        }
+      }
     }
   }
 }

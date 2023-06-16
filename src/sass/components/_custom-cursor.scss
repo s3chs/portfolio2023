@@ -6,6 +6,10 @@
   transform: translate3d(0, 0, 0);
   position: fixed;
   mix-blend-mode: difference;
+
+  @media screen and (max-width: $layout-breakpoint-xsmall) {
+    display: none;
+  }
 }
 
 .main-cursor {

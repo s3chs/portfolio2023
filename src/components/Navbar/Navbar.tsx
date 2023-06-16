@@ -5,6 +5,7 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 export const Navbar = () => {
     const {scroll} = useLocomotiveScroll();
+    const containerRef = useRef<HTMLDivElement>(null);
     const refs: any = useRef([]);
     const {setType} = useContext(CustomCursorContext);
 
@@ -15,6 +16,12 @@ export const Navbar = () => {
     };
 
     useEffect(() => {
+
+        const timer = setTimeout(() => {
+            if (containerRef.current)
+                containerRef.current.style.transform = 'translateY(0)';
+        }, 3200);
+
         refs.current.forEach((element: any) => {
             let innerText = element.innerText;
             element.innerHTML = '';
@@ -46,6 +53,7 @@ export const Navbar = () => {
                 });
             });
             refs.current = [];
+            clearTimeout(timer);
         };
     }, []);
 
@@ -59,7 +67,7 @@ export const Navbar = () => {
     };
 
     return (
-        <div className="navbar-container">
+        <div className="navbar-container" ref={containerRef}>
             <p
                 className="initials"
                 onMouseEnter={() => setType('link')}

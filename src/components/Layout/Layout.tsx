@@ -1,8 +1,17 @@
-import { ReactNode, useRef } from 'react';
+import { ReactNode, useEffect, useRef } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 
 export const Layout = ({children}: {children: ReactNode}) => {
-    const containerRef = useRef(null);
+
+    const containerRef = useRef<any>(null);
+
+    useEffect(() => {
+        setTimeout(() => {
+            containerRef.current.style.overflow = 'auto';
+            containerRef.current.style.height = '100%';
+        }, 4000);
+    }, []);
+
     return (
         <LocomotiveScrollProvider options={{
             smooth: true,

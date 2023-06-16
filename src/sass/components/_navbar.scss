@@ -1,8 +1,8 @@
 .navbar-container {
-
   z-index: 100;
   position: fixed;
   top: 0;
+  transform: translateY(-100%);
 
   display: flex;
   align-items: center;
@@ -15,6 +15,7 @@
   color: $white;
 
   mix-blend-mode: difference;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
 
   .initials {
     font-size: 2.5em;
@@ -24,6 +25,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
     a {
       font-size: $small-text;
       cursor: pointer;
@@ -68,6 +70,7 @@
     .letter:nth-child(4) {
       transition-delay: 0.09s;
     }
+
     .letter:nth-child(5) {
       transition-delay: 0.12s;
     }

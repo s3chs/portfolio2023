@@ -3,6 +3,8 @@
   flex-direction: column;
   justify-content: space-between;
 
+  overflow: hidden;
+
   height: 100vh;
   padding: $global-padding;
   background-color: $black;
@@ -80,9 +82,9 @@
 
         @media screen and (max-width: $layout-breakpoint-xsmall) {
           font-size: $small-text;
+          margin-top: 3vh;
         }
       }
-
     }
   }
 
@@ -127,6 +129,9 @@
             margin-right: 3vw;
           }
         }
+      }
+      @media screen and (max-width: $layout-breakpoint-xsmall) {
+        padding-bottom: 10vh;
       }
     }
   }

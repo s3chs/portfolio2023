@@ -70,6 +70,9 @@ export const Project = ({project}: {project: ProjectProps}) => {
                      data-scroll data-scroll-speed="1" data-scroll-class="reveal-marquee">
                     <Marquee text={project.marquee.text} addRef={addToRefs}/>
                 </div>
+                <div className="project-link" data-scroll data-scroll-speed="1">
+                    <span data-scroll data-scroll-class="reveal-text">See project</span>
+                </div>
             </div>
         );
     }

@@ -120,7 +120,9 @@
       .marquee-text {
         font-style: italic;
         font-size: 7vw;
-        bottom: 1.8vh;
+        opacity: 0;
+        transition: bottom 1.5s cubic-bezier(0.77, 0, 0.175, 1), opacity 2.5s cubic-bezier(0.77, 0, 0.175, 1) ;
+        bottom: -100%;
 
         @media screen and (max-width: $layout-breakpoint-small) {
           font-size: 10vw;

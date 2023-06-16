@@ -1,5 +1,5 @@
 import Ellipses from '../../assets/images/Ellipses.svg';
-import { useEffect, useRef, useState } from 'react';
+import { MutableRefObject, useEffect, useRef, useState } from 'react';
 import { LoopingElement } from '../Marquee/LoopingElement';
 import { Marquee } from '../Marquee/Marquee';
 
@@ -30,7 +30,8 @@ export default Clock;
 
 export const Home = () => {
 
-    const refs: React.MutableRefObject<any> = useRef([]);
+    const marqueeRef = useRef<any>(null);
+    const refs = useRef<any>([]);
 
     const addToRefs = (el: HTMLDivElement) => {
         if (el && !refs.current.includes(el)) {
@@ -41,6 +42,19 @@ export const Home = () => {
     useEffect(() => {
         new LoopingElement(refs.current[0], 0, 0.007);
         new LoopingElement(refs.current[1], -100, 0.007);
+
+        const timer = setTimeout(() => {
+            if (refs.current[0]) {
+                refs.current[0].style.bottom = '1.8vh';
+                refs.current[0].style.opacity = 1;
+                refs.current[1].style.bottom = '1.8vh';
+                refs.current[1].style.opacity = 1;
+            }
+        }, 2500);
+
+        return () => {
+            clearTimeout(timer);
+        };
     }, []);
 
     return (
@@ -75,7 +89,7 @@ export const Home = () => {
                     </div>
                     <div className="hero-info" data-scroll data-scroll-speed="2.5" data-scroll-position="top">
                         <span className="job-title">Creative front-end developer</span>
-                        <span className="geo-info">(from the land of the baguette)</span>
+                        <span className="geo-info">from the land of the baguette</span>
                     </div>
                 </div>
                 <div className="hero-details" data-scroll data-scroll-speed="3" data-scroll-position="top">
@@ -83,7 +97,7 @@ export const Home = () => {
                     <Clock/>
                 </div>
             </div>
-            <div className="marquee">
+            <div className="marquee" ref={marqueeRef}>
                 <Marquee text={' welcome to my universe '} addRef={addToRefs}/>
             </div>
         </section>
