@@ -9,8 +9,8 @@ export const Projects = () => {
                 Selected projects
             </span>
             </div>
-            <Project project={lambdaGarments}/>
             <Project project={koji}/>
+            <Project project={lambdaGarments}/>
             <Project project={sneakLove}/>
         </section>
     );

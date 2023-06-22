@@ -26,9 +26,9 @@ export const lambdaGarments: ProjectProps = {
         text: 'An e-commerce website made with React and NodeJS. this project originated from my passion with vintage music band shirts.',
     },
     imgs: [
-        'https://media.istockphoto.com/id/1333301147/fr/photo/v%C3%AAtements-de-design-imprim%C3%A9s-par-un-designer-singapourien.jpg?s=612x612&w=0&k=20&c=nup-t8F3tKS6rWj6VhsWXlP1YC2mb1pzEMvmL0GAJjs=',
-        'https://images.unsplash.com/photo-1517502166878-35c93a0072f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNsb3RoaW5nJTIwd2Vic2l0ZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
-        'https://images.unsplash.com/photo-1581655353564-df123a1eb820?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hpcnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
+        'https://res.cloudinary.com/dncemocxu/image/upload/v1687424162/Lambda%20Garments/Capture_d_e%CC%81cran_2023-06-21_a%CC%80_15.14.04_ltzibj.png',
+        'https://res.cloudinary.com/dncemocxu/image/upload/v1687424162/Lambda%20Garments/Capture_d_e%CC%81cran_2023-06-21_a%CC%80_15.14.22_b00s8k.png',
+        'https://res.cloudinary.com/dncemocxu/image/upload/v1636031435/Lambda%20Garments/packshot%20FINAL/2Z1A9825_lq2dzl.jpg',
     ],
     marquee: {
         text: ' lambda garments ',
