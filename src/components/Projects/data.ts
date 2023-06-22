@@ -13,6 +13,7 @@ export interface ProjectProps {
         text: string,
     };
     className: string;
+    link: string;
 }
 
 export const lambdaGarments: ProjectProps = {
@@ -34,6 +35,7 @@ export const lambdaGarments: ProjectProps = {
         text: ' lambda garments ',
     },
     className: 'lambda-garments',
+    link: 'https://lambda-garms-client-1a8v5cweb-s3chs.vercel.app/',
 };
 
 export const koji: ProjectProps = {
@@ -55,6 +57,7 @@ export const koji: ProjectProps = {
         text: ' koji cocktail bar ',
     },
     className: 'koji',
+    link: 'https://s3chs.github.io/Koji/',
 };
 
 export const sneakLove: ProjectProps = {
@@ -76,4 +79,5 @@ export const sneakLove: ProjectProps = {
         text: ' sneak love ',
     },
     className: 'sneak-love',
+    link: 'https://s3chs.github.io/sneak-love/',
 };
