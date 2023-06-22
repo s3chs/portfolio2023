@@ -6,6 +6,7 @@ export const Contact = () => {
     const {setType} = useContext(CustomCursorContext);
 
     const Footer = () => {
+
         return (
             <div className="footer-container" data-scroll data-scroll-speed="2">
                 <div className="portfolio-technologies">
@@ -19,21 +20,24 @@ export const Contact = () => {
                     </span>
                     <div className="socials-list">
                         <a
-                            href="#"
+                            href="https://github.com/s3chs"
+                            target="_blank"
                             onMouseEnter={() => setType('link')}
                             onMouseLeave={() => setType('default')}
                         >
                             GitHub
                         </a>
                         <a
-                            href="#"
+                            href="https://www.linkedin.com/in/philippe-buteau06/"
+                            target="_blank"
                             onMouseEnter={() => setType('link')}
                             onMouseLeave={() => setType('default')}
                         >
                             LinkedIn
                         </a>
                         <a
-                            href="#"
+                            href="https://www.instagram.com/phil.but/"
+                            target="_blank"
                             onMouseEnter={() => setType('link')}
                             onMouseLeave={() => setType('default')}
                         >

@@ -32,8 +32,7 @@ export const Project = ({project}: {project: ProjectProps}) => {
             <div className={`project-name ${project.className}`} data-scroll data-scroll-speed="1">
                 <span data-scroll data-scroll-class="reveal-text" data-scroll-offset="100">{project.name.text}</span>
             </div>
-            <div className={`project-info ${project.className}`} data-scroll
-                 data-scroll-speed="1.3">
+            <div className={`project-info ${project.className}`} data-scroll data-scroll-speed="1.3">
                 <span data-scroll data-scroll-class="reveal-text" data-scroll-offset="100">{project.info.text}</span>
             </div>
             <div className={`project-description ${project.className}`} data-scroll
