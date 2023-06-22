@@ -37,6 +37,12 @@
       @media screen and (max-width: $layout-breakpoint-small) {
         font-size: 1em;
       }
+
+      @media screen and (max-width: $layout-breakpoint-small) {
+        &:nth-child(1), &:nth-child(2) {
+          margin-right: 5vw;
+        }
+      }
     }
 
     .nav-text {
