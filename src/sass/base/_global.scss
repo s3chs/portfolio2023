@@ -1,8 +1,8 @@
 html {
   body {
-    font-family: "PP Neue Montreal";
-    //-webkit-font-smoothing: antialiased;
-    //-moz-osx-font-smoothing: grayscale;
+    font-family: "Philifont", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     background-color: #1E1A1D;;
   }
 }
@@ -22,6 +22,8 @@ html {
   color: $black;
   overflow: hidden;
   padding-bottom: 10px;
+  font-family: Philifont;
+
 
   @media screen and (max-width: $layout-breakpoint-small) {
     font-size: 5em;

@@ -27,6 +27,7 @@ export class LoopingElement {
 
     events() {
         window.addEventListener('scroll', () => {
+            console.log("yeah");
             let direction = window.scrollY;
             if (direction > this.scrollTop) {
                 this.direction = true;
